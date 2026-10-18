@@ -190,3 +190,73 @@ input[type="checkbox"]:checked {
 .graph-view.color-line-highlight {
   color: var(--graph-node-focused);
 }
+
+/* Callouts: solid subway colors with auto black/white text (same rule as
+   tags). Obsidian sets --callout-color as an "r, g, b" triplet per type and
+   data-callout holds the name as typed, so every alias is listed. Unknown
+   types fall back to the base .callout color, like note. */
+.callout,
+.callout[data-callout="note"],
+.callout[data-callout="info"],
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --callout-color: 0, 98, 207; /* blue #0062CF */
+}
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  --callout-color: 142, 92, 51; /* brown #8E5C33 */
+}
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"],
+.callout[data-callout="todo"] {
+  --callout-color: 246, 188, 38; /* yellow #F6BC26 */
+}
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-color: 0, 153, 82; /* green #009952 */
+}
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --callout-color: 235, 104, 0; /* orange #EB6800 */
+}
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"] {
+  --callout-color: 216, 34, 51; /* red #D82233 */
+}
+.callout[data-callout="example"] {
+  --callout-color: 154, 56, 161; /* purple #9A38A1 */
+}
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --callout-color: 124, 133, 140; /* gray #7C858C */
+}
+
+.callout {
+  --callout-text: #ffffff;
+  --callout-text: oklch(from rgb(var(--callout-color)) clamp(0, (0.65 - l) * 1000, 1) 0 0);
+  background-color: rgb(var(--callout-color));
+  color: var(--callout-text);
+  border: none;
+  border-radius: var(--tag-radius);
+}
+
+/* Title, icon, fold arrow and everything inside follow the auto text color,
+   since accent links or muted text would disappear on a solid background. */
+.callout .callout-title,
+.callout .callout-icon,
+.callout .callout-fold,
+.callout .callout-content,
+.callout .callout-content :is(a, a.internal-link, strong, em, h1, h2, h3, h4, h5, h6, li::marker) {
+  color: var(--callout-text);
+}
+.callout .callout-content a { text-decoration: underline; }
+.callout .callout-content blockquote { border-left-color: var(--callout-text); }
