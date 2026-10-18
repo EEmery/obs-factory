@@ -1,4 +1,4 @@
-/* Fabric — a Minimal-inspired Obsidian theme with its own accent colors. */
+/* Factory — a Minimal-inspired Obsidian theme with its own accent colors. */
 
 /* ---------- Accent (edit these to change the palette) ---------- */
 body {
@@ -152,4 +152,41 @@ input[type="checkbox"]:checked {
 .markdown-rendered code {
   background-color: var(--background-primary-alt);
   border-radius: var(--radius-s);
+}
+
+/* Search matches: same solid grey + auto text color as the selected file.
+   Targeted directly so ==highlights== keep their own color. */
+.search-result-file-matched-text,
+.cm-searchMatch,
+.cm-searchMatch-selected,
+.document-search-match {
+  background-color: var(--nav-active-background);
+  color: var(--nav-active-color);
+  border-radius: 2px;
+}
+
+/* Text selection: same solid grey. --text-selection drives both the
+   editor's selection layer and native selection in reading view. It's set
+   on the theme classes because Obsidian defines it there, which beats body;
+   ::selection sets the text on top to the matching black/white. */
+.theme-light,
+.theme-dark {
+  --text-selection: var(--nav-active-background);
+}
+.cm-editor .cm-selectionBackground,
+.cm-editor.cm-focused .cm-selectionBackground {
+  background-color: var(--nav-active-background) !important;
+}
+::selection {
+  background-color: var(--nav-active-background);
+  color: var(--nav-active-color);
+}
+
+/* Graph view. The graph is drawn on a canvas, so Obsidian reads its colors
+   from these helper classes rather than the variables directly. Hovering a
+   node uses the "highlight" colors, not "focused" (that's the open note). */
+.graph-view.color-fill-focused,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+  color: var(--graph-node-focused);
 }
