@@ -10,7 +10,7 @@ body {
   /* Typography */
   --font-text-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
   --font-interface-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-  --font-monospace-theme: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  --font-monospace-theme: "Atkinson Hyperlegible Mono", "JetBrains Mono", "SF Mono", Menlo, monospace;
   --font-text-size: 16px;
   --line-height-normal: 1.6;
   --file-line-width: 42rem;
@@ -49,6 +49,7 @@ body {
   --text-muted: #6b6b6b;
   --text-faint: #a3a3a3;
   --nav-active-background: #3a3a3a;
+  --graph-node-focused: #1f1f1f;
   --divider-color: transparent;
 }
 
@@ -64,6 +65,7 @@ body {
   --text-muted: #9a9a9a;
   --text-faint: #666666;
   --nav-active-background: #b5b5b5;
+  --graph-node-focused: #e6e6e6;
   --divider-color: transparent;
 }
 
