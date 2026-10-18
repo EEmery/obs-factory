@@ -48,6 +48,7 @@ body {
   --text-normal: #222222;
   --text-muted: #6b6b6b;
   --text-faint: #a3a3a3;
+  --nav-active-background: #3a3a3a;
   --divider-color: transparent;
 }
 
@@ -62,6 +63,7 @@ body {
   --text-normal: #dcdcdc;
   --text-muted: #9a9a9a;
   --text-faint: #666666;
+  --nav-active-background: #b5b5b5;
   --divider-color: transparent;
 }
 
@@ -115,10 +117,21 @@ a.tag,
 }
 
 /* Active file in the explorer */
+/* Solid grey (set per theme) with the same auto black/white text as tags */
+body {
+  --nav-active-color: #ffffff;
+  --nav-active-color: oklch(from var(--nav-active-background) clamp(0, (0.65 - l) * 1000, 1) 0 0);
+}
 .nav-file-title.is-active,
-.tree-item-self.is-active {
-  background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
-  color: var(--text-normal);
+.tree-item-self.is-active,
+body:not(.is-grabbing) .tree-item-self.is-active:hover {
+  background-color: var(--nav-active-background);
+  color: var(--nav-active-color);
+  border-radius: var(--tag-radius);
+}
+.tree-item-self.is-active .tree-item-icon,
+.tree-item-self.is-active .nav-file-tag {
+  color: var(--nav-active-color);
 }
 
 /* Checkboxes */
