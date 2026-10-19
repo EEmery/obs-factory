@@ -23,6 +23,7 @@ _Screenshots coming soon._
 - **Solid grey highlights** for the selected file, search matches and text selection, dark grey in light mode and light grey in dark mode.
 - **Pitch-black dark mode** across the editor and sidebars.
 - **High-contrast graph view**: hovered and open notes stand out in grey instead of the accent.
+- **Vault indicator**: a small accent-colored dot in the status bar, handy when each vault has its own accent.
 - **Readable code** with [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono), falling back to JetBrains Mono, SF Mono or Menlo.
 
 ## Installation
@@ -82,6 +83,12 @@ Factory's palette is based on the NYC subway line colors. Yellow is the default.
 | Purple | `#9A38A1` | `296` | `48%` | `43%` |
 
 Tag text switches to black or white automatically, so every color stays readable on its chip.
+
+#### One color per vault
+
+If you use several vaults, try giving each its own accent, for example yellow for personal notes and blue for work. Add a CSS snippet with that vault's accent values in its `.obsidian/snippets/` folder, then turn it on under **Settings → Appearance → CSS snippets**. Every vault keeps the same theme, but each one is easy to tell apart at a glance.
+
+To make that work even when a note is plain text, Factory shows a small dot in the vault's accent color at the start of the status bar, in the bottom-right corner of the window. Change its size with `--vault-dot-size`.
 
 ## Development
 

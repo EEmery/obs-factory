@@ -260,3 +260,19 @@ input[type="checkbox"]:checked {
 }
 .callout .callout-content a { text-decoration: underline; }
 .callout .callout-content blockquote { border-left-color: var(--callout-text); }
+
+/* Vault indicator: a small accent dot at the start of the status bar
+   (bottom-right corner), so the vault's accent is always visible. */
+body {
+  --vault-dot-size: 8px;
+}
+.status-bar::before {
+  content: "";
+  align-self: center;
+  flex-shrink: 0;
+  width: var(--vault-dot-size);
+  height: var(--vault-dot-size);
+  margin-inline: 4px 6px;
+  border-radius: 50%;
+  background-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}
