@@ -8,7 +8,7 @@ body {
   --accent-l: 56%; /* #F6BC26 */
 
   /* Typography */
-  --font-text-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  --font-text-theme: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
   --font-interface-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
   --font-monospace-theme: "Atkinson Hyperlegible Mono", "JetBrains Mono", "SF Mono", Menlo, monospace;
   --font-text-size: 16px;

@@ -24,7 +24,7 @@ _Screenshots coming soon._
 - **Pitch-black dark mode** across the editor and sidebars.
 - **High-contrast graph view**: hovered and open notes stand out in grey instead of the accent.
 - **Vault indicator**: a small accent-colored dot in the status bar, handy when each vault has its own accent.
-- **Readable code** with [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono), falling back to JetBrains Mono, SF Mono or Menlo.
+- **Legible type** with [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) for text and [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) for code, when installed. See [Recommended fonts](#recommended-fonts).
 
 ## Installation
 
@@ -43,9 +43,16 @@ _Screenshots coming soon._
 
 `.obsidian` is a hidden folder. On macOS, press Cmd+Shift+. in Finder to show it.
 
-### Optional font
+### Recommended fonts
 
-For the intended code font, install [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) and restart Obsidian. Without it, Factory falls back to the next available monospace font.
+Factory is designed around two free fonts from the Braille Institute, built for legibility. Download them from Google Fonts:
+
+- [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) for note text
+- [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) for code
+
+On each page, click **Get font**, then **Download all**. Unzip the file, install the fonts (on macOS, double-click each one and click **Install**), and restart Obsidian.
+
+Both are optional. Without them, Factory uses your system font for text and JetBrains Mono, SF Mono or Menlo for code. The interface always uses the system font.
 
 ## Customization
 
