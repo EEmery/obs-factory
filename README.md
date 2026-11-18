@@ -105,5 +105,4 @@ Inspired by [Minimal](https://github.com/kepano/obsidian-minimal) by [@kepano](h
 
 ## License
 
-<!-- Add a LICENSE file (for example MIT) before publishing. -->
-_License to be added._
+[MIT](./LICENSE) © Eduardo Emery
