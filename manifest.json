@@ -2,5 +2,6 @@
   "name": "Factory",
   "version": "0.1.0",
   "minAppVersion": "1.0.0",
-  "author": "Eduardo Emery"
+  "author": "Eduardo Emery",
+  "authorUrl": "https://github.com/EEmery"
 }

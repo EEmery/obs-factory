@@ -2,19 +2,11 @@
 
 A quiet, minimal theme for [Obsidian](https://obsidian.md), inspired by [Minimal](https://github.com/kepano/obsidian-minimal), with a warm yellow accent and a pitch-black dark mode.
 
-<!-- Cover image: add ./images/cover.png and uncomment
-![Factory](./images/cover.png)
--->
+![Factory](./images/obs-factory-1.png)
 
 ## Screenshots
 
-<!-- Add screenshots to ./images/ and uncomment
-| Light | Dark |
-| --- | --- |
-| ![Light mode](./images/light.png) | ![Dark mode](./images/dark.png) |
--->
-
-_Screenshots coming soon._
+![Factory screenshot](./images/obs-factory-2.png)
 
 ## Features
 
